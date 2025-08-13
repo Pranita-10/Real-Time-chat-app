@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Pranita</h2>
+            <p id="user-count">Online</p>
+            <button id="clear-chat-btn" class="clear-chat-btn">Delete Chat</button>
+        </div>
+        <ul id="messages" class="chat-messages"></ul>
+        <form id="form" class="chat-input-form">
+            <input id="input" autocomplete="off" placeholder="Type your message..." />
+            <button type="submit">Send </button>
+        
+        </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

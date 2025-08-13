@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgb(53, 48, 48);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #35929ec3;
+    color: white;
+    padding: 0;  /* change padding  */
+    text-align: center;
+    border-top-left-radius: 8px;   
+    border-top-right-radius: 8px;
+}
+
+.chat-messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    border-bottom: 1px solid #eee;
+}
+
+.chat-messages li {
+    background-color: #e2e8f0;
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.chat-messages li.my-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto; /* Push to the right */
+}
+
+.chat-input-form {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.chat-input-form input {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.chat-input-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.chat-input-form button:hover {
+    background-color: #25893b;
+}
+
+
+/* Add this to your public/style.css */
+
+.chat-messages li {
+    position: relative; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.chat-messages li .message-text {
+    margin-bottom: 5px; /* Space between message and time */
+}
+
+.chat-messages li .timestamp {
+    font-size: 0.75em; /* Smaller font size for time */
+    color: #667784; /* A lighter color for subtlety */
+    align-self: flex-end; /* Pushes the time to the right within the message bubble */
+    margin-left: 10px; /* Some padding from the message text if in same line*/
+}
+
+/* Optional: Adjust for 'my-message' if you want a different time color */
+.chat-messages li.my-message .timestamp {
+    color: rgba(255, 255, 255, 0.7); /* Lighter color on dark blue background */
+}
+
+/* Add this to public/style.css, perhaps near .chat-header styles */
+
+.chat-header {
+    /* Existing styles */
+    position: relative; /* Add this if not already present, useful for positioning children */
+    padding-bottom: 20px; /* Give some space for the button */
+}
+
+.clear-chat-btn {
+    position: absolute; /* Position it relative to the header */
+    bottom: 5px; /* Adjust as needed */
+    right: 15px; 
+    background-color: #576565; /* Red color for clear/danger action */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background-color 0.2s ease;
+}
+
+.clear-chat-btn:hover {
+    background-color: #c92828;
+}
